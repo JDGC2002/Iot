@@ -7,7 +7,7 @@ APELLIDOS = ["Calle", "Lopez", "Vargas", "Castrillon", "Baños"]
 REGISTRO = []
 
 class Biblioteca():
-    def _init_(self, nombre, apellido, libro, cantidad):
+    def __init__(self, nombre, apellido, libro, cantidad):
         self.nombre = nombre
         self.apellido = apellido
         self.libro = libro
@@ -60,5 +60,5 @@ def main():
 
       
     
-if __name__ == "_main_":
+if __name__ == "__main__":
     main()
