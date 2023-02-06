@@ -22,14 +22,11 @@ class Biblioteca():
             existencia = "No hay existencia"
             return("{} del libro {}. No se puede prestar el libro").format(existencia, self.libro)
     
-    def validar_existencias(self):
+    def registro_existencias(self):
         if self.cantidad > 0:
-            return ("Si hay existencia")
+            return ("Hay {} unidades del libro {} disponibles".format(self.cantidad, self.libro))
         elif self.cantidad == 0:
-            return ("No hay existencia")
-        
-    def cantidad_libro(self):
-        return ("Hay {} unidades del libro {} disponibles").format(self.cantidad, self.libro)
+            return ("No hay existencias del libro {}").format(self.libro)
     
     def registrar(self):
         nombreapellido= (self.nombre + " " + self.apellido) 
@@ -56,7 +53,7 @@ def main():
         cantidad = i[1]
         b1= Biblioteca(nombre, apellido, libro, cantidad)
         print(b1.registrar())
-        print(b1.cantidad_libro())
+        print(b1.registro_existencias())
         print(b1.prestar_libro())
         print (" ")
     print("Usuarios registrados en la biblioteca: ", REGISTRO)
