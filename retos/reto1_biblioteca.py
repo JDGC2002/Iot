@@ -24,7 +24,7 @@ class Biblioteca():
     
     def registro_existencias(self):
         if self.cantidad > 0:
-            return ("Hay {} unidades del libro {} disponibles".format(self.cantidad, self.libro))
+            return ("Hay {} existencia(s) del libro {} disponibles".format(self.cantidad, self.libro))
         elif self.cantidad == 0:
             return ("No hay existencias del libro {}").format(self.libro)
     
