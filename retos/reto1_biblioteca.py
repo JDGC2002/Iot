@@ -36,19 +36,24 @@ class Biblioteca():
 
 def crear_biblioteca(lugar):
     libros= []
-    for i in range(2):
+    numero_libros= random.randint(1,5)
+    for i in range(numero_libros):
         l= random.choice (LIBROS1)
         l1= random.choice (LIBROS2)
-        cantidad= random.randint(0,2)
-        li= (l+l1, cantidad)
+        cantidad_libro= random.randint(0,10)
+        li= (l+l1, cantidad_libro)
         libros.append (li)
     return libros
+
+def persona_prestadora():
+    nombre=random.choice (NOMBRES)
+    apellido = random.choice (APELLIDOS)
+    return (nombre, apellido)
 
 def main():
     ces = crear_biblioteca("CES")
     for i in ces:
-        nombre=random.choice (NOMBRES)
-        apellido = random.choice (APELLIDOS)
+        nombre, apellido = persona_prestadora()
         libro=i[0]
         cantidad = i[1]
         b1= Biblioteca(nombre, apellido, libro, cantidad)
@@ -58,7 +63,5 @@ def main():
         print (" ")
     print("Usuarios registrados en la biblioteca: ", REGISTRO)
 
-      
-    
 if __name__ == "__main__":
     main()
