@@ -1,3 +1,6 @@
+#ISABEL CASTRILLÓN
+#JHON DIEGO GÓMEZ
+
 import random
 
 LIBROS1 = ["Fundamentos de ", "Introducción a la ", "Historia de la "]
