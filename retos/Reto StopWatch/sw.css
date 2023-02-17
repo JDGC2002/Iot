@@ -2,6 +2,7 @@
     margin: 5px;
     padding: 0;
 }
+
 body{
     background-color: black;
     color: green;
@@ -54,4 +55,45 @@ button:hover{
     background: white;
     color: black;
     cursor: pointer;
+}
+.containerLaps{
+    width: 245px;
+    height: 245px;
+    background: white;
+    border: 50%;
+    display: flex;
+    align-items: right; /* alinea en eje y */
+    justify-content: right; /* alinea en eje x */
+}
+.outerLap{
+    width: 245px;
+    height: 245px;
+    background: white;
+    border: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.innerLap{
+    background: black;
+    border: 50%;
+    width: 230px;
+    height: 230px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.titleLaps{
+    color: white;
+    font-size: 23px;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+}
+.lapText{
+    color: white;
+    font-size: 20px;
+    display: flex;
+    align-items: top;
+    justify-content: left;
 }

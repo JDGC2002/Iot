@@ -3,6 +3,7 @@ let stop = document.getElementById('stop');
 let reset = document.getElementById('reset');
 let lap = document.getElementById('lap');
 
+let lapText = document.getElementById('lapText');
 let hourHtml = document.getElementById('hour');
 let minHtml = document.getElementById('min');
 let secHtml = document.getElementById('sec');
@@ -39,7 +40,7 @@ start.addEventListener('click', function () {
 
 lap.addEventListener('click', function () {
     lap_num++;
-    console.log("Lap#" + lap_num + ": " +
+    lapText.innerHTML += ("<br>Lap#" + lap_num + ": " +
     (hour < 10 ? "0" + hour : hour) + ":" +
     (min < 10 ? "0" + min : min) + ":" +
     (sec < 10 ? "0" + sec : sec))
@@ -51,10 +52,12 @@ stop.addEventListener('click', function () {
 
 reset.addEventListener('click', function () {
     clearInterval(interval);
+    lap_num = 0;  // reiniciar el contador de vueltas
     hour = 0;
     min = 0;
     sec = 0;
     hourHtml.innerHTML = "00:";
     minHtml.innerHTML = "00:";
     secHtml.innerHTML = "00";
+    lapText.innerHTML = "";
 });
